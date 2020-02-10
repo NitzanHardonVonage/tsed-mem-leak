@@ -4,19 +4,24 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
+    "postinstall": "pip3 install locust",
     "start": "nodemon --watch src --exec ts-node src/app.ts",
     "start:js": "node out/app.js",
     "inspect": "node --inspect out/app.js",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "test:locust": "locust -f locus/locusfile.py --no-web -c 4 -t 60s",
+    "test:artillery": "npx artillery run artillery/test.yml",
+    "docker:build": "npm run build && docker-compose build",
+    "docker:up": "docker-compose up -d"
   },
   "author": "Nitzan Hardon",
   "license": "ISC",
   "dependencies": {
-    "@tsed/common": "5.41.2",
-    "@tsed/core": "5.41.2",
-    "@tsed/di": "5.41.2",
-    "@tsed/swagger": "5.41.2",
-    "@tsed/testing": "5.41.2",
+    "@tsed/common": "5.42.0",
+    "@tsed/core": "5.42.0",
+    "@tsed/di": "5.42.0",
+    "@tsed/swagger": "5.42.0",
+    "@tsed/testing": "5.42.0",
     "@types/swagger-schema-official": "2.0.20",
     "body-parser": "1.19.0",
     "compression": "1.7.4",
@@ -26,7 +31,7 @@
     "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "@tsed/testing": "5.41.2",
+    "@tsed/testing": "5.42.0",
     "@types/compression": "^1.0.1",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.6",
@@ -38,6 +43,7 @@
     "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "artillery": "^1.6.0-29",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-import-resolver-alias": "^1.1.2",

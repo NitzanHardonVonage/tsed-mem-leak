@@ -1,0 +1,38 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 4
+  defaults:
+     headers:
+        Accept: 'application/json'
+        Content-Type': 'application/json'
+  variables:
+     id:
+       - "8731"
+       - "9965"
+       - "2806"
+       - "2807"
+       - "2808"
+       - "2809"
+     names:
+       - "string"
+       - "name"
+       - "nitzan"
+       - "hardon"
+       - "memory"
+       - "leak"
+       - "aaaa"
+scenarios:
+  - flow:
+      - get:
+          url: "/ctrl/{{ id }}"
+      - post:
+          url: "/ctrl/{{ id }}"
+          json:
+            name: "{{ names }}"
+      - put:
+          url: "/ctrl/{{ id }}?name={{ name }}"
+      - delete:
+          url: "/ctrl/{{ id }}"
+
