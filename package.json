@@ -9,7 +9,7 @@
     "start:js": "node out/app.js",
     "inspect": "node --inspect out/app.js",
     "build": "npx tsc",
-    "test:locust": "locust -f locus/locusfile.py --no-web -c 4 -t 60s",
+    "test:locust": "locust -f locus/locusfile.py --no-web -c 4 -r 70",
     "test:artillery": "npx artillery run artillery/test.yml",
     "docker:build": "npm run build && docker-compose build",
     "docker:up": "docker-compose up -d"
@@ -17,11 +17,11 @@
   "author": "Nitzan Hardon",
   "license": "ISC",
   "dependencies": {
-    "@tsed/common": "5.42.0",
-    "@tsed/core": "5.42.0",
-    "@tsed/di": "5.42.0",
-    "@tsed/swagger": "5.42.0",
-    "@tsed/testing": "5.42.0",
+    "@tsed/common": "5.42.1",
+    "@tsed/core": "5.42.1",
+    "@tsed/di": "5.42.1",
+    "@tsed/swagger": "5.42.1",
+    "@tsed/testing": "5.42.1",
     "@types/swagger-schema-official": "2.0.20",
     "body-parser": "1.19.0",
     "compression": "1.7.4",
@@ -31,7 +31,7 @@
     "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "@tsed/testing": "5.42.0",
+    "@tsed/testing": "5.42.1",
     "@types/compression": "^1.0.1",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.6",
