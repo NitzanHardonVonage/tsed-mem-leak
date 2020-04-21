@@ -11,13 +11,11 @@ export const conf: Partial<IServerSettings> = {
   httpsPort: false,
   logger: {
     logRequest: true,
-    logStart: false,
     jsonIndentation: 0,
     ignoreUrlPatterns: ["/healthcheck", "/v1/hdap//*"],
     disableRoutesSummary: true,
     format: "%d{[yyyy-MM-dd hh:mm:ss,SSS}] %p %m",
     // format: "%[%d{[yyyy-MM-dd hh:mm:ss,SSS}] %p%] %m",
-    level: "info",
     requestFields: [
       "method",
       "url",

@@ -1,5 +1,5 @@
 import { conf } from './config/conf';
-import { $log, ServerLoader, ServerSettings } from '@tsed/common';
+import { ServerLoader, ServerSettings } from '@tsed/common';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
@@ -27,6 +27,6 @@ export class Server extends ServerLoader {
 			}))
 	}
 	public $onReady(): void {
-		$log.info('Server started...');
+		console.log('Server started...');
 	}
 }
