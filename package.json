@@ -26,6 +26,7 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "express": "^4.16.4",
+    "ts-log-debug": "^4.0.4",
     "method-override": "^3.0.0"
   },
   "devDependencies": {
