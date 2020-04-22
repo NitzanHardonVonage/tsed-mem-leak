@@ -9,7 +9,7 @@
     "start:js": "node out/app.js",
     "inspect": "node --inspect out/app.js",
     "build": "npx tsc",
-    "test:locust": "locust -f locus/locusfile.py --no-web -c 100 -r 100",
+    "test:locust": "locust -f locust/locustfile.py --no-web -c 100 -r 100",
     "test:artillery": "npx artillery run artillery/test.yml",
     "docker:build": "npm run build && docker-compose build",
     "docker:up": "docker-compose up -d"
