@@ -17,10 +17,10 @@
   "author": "Nitzan Hardon",
   "license": "ISC",
   "dependencies": {
-    "@tsed/common": "5.48.0",
-    "@tsed/core": "5.48.0",
-    "@tsed/swagger": "5.48.0",
-    "@tsed/di": "5.48.0",
+    "@tsed/common": "5.42.1",
+    "@tsed/core": "5.42.1",
+    "@tsed/swagger": "5.42.1",
+    "@tsed/di": "5.42.1",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
@@ -30,7 +30,7 @@
     "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "@tsed/testing": "5.48.0",
+    "@tsed/testing": "5.42.1",
     "@types/express": "^4.16.0",
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.0",
