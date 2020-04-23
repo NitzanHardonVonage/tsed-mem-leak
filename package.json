@@ -19,15 +19,17 @@
   "dependencies": {
     "@tsed/common": "5.8.0",
     "@tsed/core": "5.8.0",
-    "@tsed/swagger": "5.8.0",
     "@tsed/di": "5.8.0",
+    "@tsed/swagger": "5.8.0",
+    "@types/express-session": "^1.17.0",
+    "@types/multer": "^1.4.3",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "ts-log-debug": "^4.0.4",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "ts-log-debug": "^4.0.4"
   },
   "devDependencies": {
     "@tsed/testing": "5.8.0",
